@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map with Markers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([19.0760, 72.8777], 1);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 17,
+        }).addTo(map);
+
+        // Adding markers to the map
+        var marker1 = L.marker([10.8505 ,  76.2711]).addTo(map); // Kerela 
+        var marker2 = L.marker([-8.6500 , 115.2167]).addTo(map); // Bali
+        var marker3 = L.marker([34.0836 , 74.7974]).addTo(map); //Kashmir
+        var marker4 = L.marker([48.8566 , 2.352]).addTo(map); //Paris
+        var marker5 = L.marker([+41.9029 , + 12.4534]).addTo(map); //Vatican City
+        var marker6 = L.marker([30.0444 , 31.2357]).addTo(map); //Egypt
+        var marker7 = L.marker([-33.8688 , +151.2093]).addTo(map); //  Sydney
+        var marker8 = L.marker([-33.9249 , 18.4241]).addTo(map); // Cape Town
+        var marker9 = L.marker([+36.1699 ,- 115.1398]).addTo(map); // Vegas
+        var marker10 = L.marker([40.7128 ,  -74.0060]).addTo(map); // New York
+        var marker11 = L.marker([55.7558 ,  37.6176]).addTo(map); // Moscow
+        var marker12 = L.marker([-22.9068,  -43.1729]).addTo(map); // Moscow
+
+
+        // You can add popups to the markers
+        marker1.bindPopup("<b>Kerala</b>").openPopup();
+        marker2.bindPopup("<b>Bali</b>").openPopup();
+        marker3.bindPopup("<b>Kashmir</b>").openPopup();
+        marker4.bindPopup("<b>Paris</b>").openPopup();
+        marker5.bindPopup("<b>Vatican City</b>").openPopup();
+        marker6.bindPopup("<b>Egypt</b>").openPopup();
+        marker7.bindPopup("<b>Sydney</b>").openPopup();
+        marker8.bindPopup("<b>Cape Town</b>").openPopup();
+        marker9.bindPopup("<b>Las Vegas</b>").openPopup();
+        marker10.bindPopup("<b>New York</b>").openPopup();
+        marker11.bindPopup("<b>Moscow</b>").openPopup();
+        marker12.bindPopup("<b>Rio de Janeiro</b>").openPopup();
+    </script>
+</body>
+</html>
